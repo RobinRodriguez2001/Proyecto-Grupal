@@ -10,16 +10,16 @@ class Operacion : Op_mate {
 		}
 	
 	
-	Operacion(int n1, int n2) : Op_mate (n1, n2){
+	Operacion(float n1, float n2) : Op_mate (n1, n2){
 	} 
 	//metodos
 	//set (modificar)
-	void setn1(int n1){num1 = n1;}	
-	void setn2(int n2){num2 = n2;}	
+	void setn1(float n1){num1 = n1;}	
+	void setn2(float n2){num2 = n2;}	
 	
 	//get(mostrar)
-	int getn1(){return num1;}	
-	int getn2(){return num2;}	
+	float getn1(){return num1;}	
+	float getn2(){return num2;}	
 	
 	//metodos
 	void sumar(){
@@ -38,6 +38,7 @@ class Operacion : Op_mate {
 	}
 	
 	void dividir(){
+		float divid = num1/num2;
 		cout<<"\nLa Division es : "<<num1/num2;
 		cout<<"\n";
 	}
