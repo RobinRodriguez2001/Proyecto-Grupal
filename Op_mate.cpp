@@ -2,13 +2,13 @@
 using namespace std;
 class Op_mate{
 	//atributos
-	protected : int num1, num2; 
+	protected : float num1, num2; 
 	
 	//constructor
 	protected :
 		Op_mate(){
 		}
-		Op_mate(int n1, int n2){
+		Op_mate(float n1, float n2){
 			num1 = n1;
 			num2 = n2;
 		}
