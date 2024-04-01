@@ -1,31 +1,43 @@
+/*		Inicializacion DE LA PARTE DE LOS 9 PROGRAMAS HECHOS POR 
+		ROBIN DANIEL RODRIGUEZ GERONIMO 7691-23-3006
+		Cada programa implementado en el switch fue hecho por
+		ROBIN RODRIGUEZ	los problemas fueron repartidos de forma
+		Equivalente sin envargo son las 9 y 30 y aun hay una parte de
+		un integrante que no cumplio y no podemos esperar a que 
+		sea media noche para entregarlo, se dio aviso correspondiente sobre 
+	 	estre proyecto para lo cual no hay excusa	
+*/
 #include "Operacion.cpp"
 #include "Si_par.cpp"
 #include "Conversiones.cpp"
-
 #include "Palabra_pol.cpp"
 #include "Ara_rom.cpp"
 #include "Num_let.cpp"
 #include "Con_dec.cpp"
 #include "Tabla_mul.cpp"
-
 #include "cajero.cpp"
 #include "hipotenusa.cpp"
 #include "calculadora.cpp"
 #include "area y perimetro.cpp"
 #include "registro_alumnos.cpp"
 #include "temperaturas.cpp"
-
+#include "MultiplicaciónManual.cpp"
+#include "ConversionBinario.cpp"
+#include "ConversionHexadecimal.cpp"
+#include "FigurasGeometricas.cpp"
+#include "MoverPunto.cpp"
 #include <iostream>
 #include <string.h>
 
 using namespace std;
 
 int main() {
-
+    // Declaración de variables
     int num1, num2, ne, opc;
     float num3;
     string num4;
-    
+
+    // Instancias de clases
     Operacion op;
     Si_par si_no;
     Palabra_pol pal;
@@ -33,7 +45,7 @@ int main() {
     Ara_rom ara;
     Num_let conver;
     Con_dec numedec;
-	Tabla_mul num_mul;
+    Tabla_mul num_mul;
     CajeroAutomatico cajero(0);
     TrianguloRectangulo triangulo(0, 0);
     Calculadora calc;
@@ -53,11 +65,11 @@ int main() {
         cout << "7. Conversion de numeros enteros con decimal a letras." << endl;
         cout << "8. Tabla de Multiplicar de n Numeros." << endl;
         cout << "9. Tabla de Multiplicar del 1 al 10 Numeros" << endl;
-        cout << "10. " << endl;
-        cout << "11. " << endl;
-        cout << "12. " << endl;
-        cout << "13. " << endl;
-        cout << "14. " << endl;
+        cout << "10. Multiplicación Manual" << endl;
+        cout << "11. Conversion Binario" << endl;
+        cout << "12. Conversion Hexadecimal" << endl;
+        cout << "13. Figuras Geometricas" << endl;
+        cout << "14. Mover Punto" << endl;
         cout << "15. Cajero Automatico" << endl;
         cout << "16. Calcular Hipotenusa" << endl;
         cout << "17. Calculadora" << endl;
@@ -68,21 +80,9 @@ int main() {
 
         cout << "    Seleccione una Opcion: ";
         cin >> opc;
-        
-        
-/*		Inicializacion DE LA PARTE DE LOS 9 PROGRAMAS HECHOS POR 
-		ROBIN DANIEL RODRIGUEZ GERONIMO 7691-23-3006
-		Cada programa implementado en el switch fue hecho por
-		ROBIN RODRIGUEZ	los problemas fueron repartidos de forma
-		Equivalente sin envargo son las 9 y 30 y aun hay una parte de
-		un integrante que no cumplio y no podemos esperar a que 
-		sea media noche para entregarlo, se dio aviso correspondiente sobre 
-	 	estre proyecto para lo cual no hay excusa	
-*/
 
         switch (opc) {
             case 1:
-    
                 system("cls");
                 cout << "\tOperaciones Matematicas" << endl;
                 cout << "\nDigite un numero: ";
@@ -146,72 +146,72 @@ int main() {
                 break;
 
             case 4:
-            	system("cls");
-            	cout<<"Palabra Polindroma\n";
-            	cout<<"\nDigite una palabra o numero: ";
-            	cin>>num4;
-            	pal = Palabra_pol(num4);
-            	pal.determinar();
+                system("cls");
+                cout<<"Palabra Polindroma\n";
+                cout<<"\nDigite una palabra o numero: ";
+                cin>>num4;
+                pal = Palabra_pol(num4);
+                pal.determinar();
                 system("pause");
                 system("cls");
                 break;
 
             case 5:
-            	system("cls");
-            	cout<<"Conversion de numeros Arabigos a Romanos\n";
-            	cout << "\nIngresa un numero entre [1-3999] para convertirlo a romano: ";
-				cin >> num1;
-				ara = Ara_rom(num1);
-				ara.determinar();
+                system("cls");
+                cout<<"Conversion de numeros Arabigos a Romanos\n";
+                cout << "\nIngresa un numero entre [1-3999] para convertirlo a romano: ";
+                cin >> num1;
+                ara = Ara_rom(num1);
+                ara.determinar();
                 system("pause");
                 system("cls");
                 break;
 
             case 6:
-            	system("cls");
-            	cout<<"Convertir numeros a letras\n";
-            	cout<<"\nIngrese un numero en un rango de 1 a 999: ";
-            	cin>>num1;
-            	conver = Num_let(num1);
-            	conver.convertir();
+                system("cls");
+                cout<<"Convertir numeros a letras\n";
+                cout<<"\nIngrese un numero en un rango de 1 a 999: ";
+                cin>>num1;
+                conver = Num_let(num1);
+                conver.convertir();
                 system("pause");
                 system("cls");
                 break;
 
             case 7:
-            	system("cls");
-            	cout<<"Convertir numeros decimales a letras\n";
-			    cout<<"Ingrese un numero decimal: ";
-            	double numero;
-			    cin >> numero;
-            	numedec = Con_dec(numero);
-            	numedec.Conve();
+                system("cls");
+                cout<<"Convertir numeros decimales a letras\n";
+                cout<<"Ingrese un numero decimal: ";
+                double numero;
+                cin >> numero;
+                numedec = Con_dec(numero);
+                numedec.Conve();
                 system("pause");
                 system("cls");
                 break;
+                
 //	FINALIZACION DE LA PARTE DE LOS 7 PROGRAMAS HECHOS POR 
 //	ROBIN DANIEL RODRIGUEZ GERONIMO 7691-23-3006
 
             case 8:
                 system("cls");
-            	cout<<"Tabla de multiplicar de n numeros\n";
-			    cout<<"Ingrese un numero de la tabla de multiplicar: ";
-			    cin >> num1;
-            	num_mul = Tabla_mul(num1);
-            	num_mul.mostrar();
+                cout<<"Tabla de multiplicar de n numeros\n";
+                cout<<"Ingrese un numero de la tabla de multiplicar: ";
+                cin >> num1;
+                num_mul = Tabla_mul(num1);
+                num_mul.mostrar();
                 system("pause");
                 system("cls");
                 break;
 
             case 9:
                 system("cls");
-            	cout<<"Tabla de multiplicar del 1 al 10.\n";
-            	num_mul = Tabla_mul(num1);
-            	num_mul.todas_las_tablas();
+                cout<<"Tabla de multiplicar del 1 al 10.\n";
+                num_mul = Tabla_mul(num1);
+                num_mul.todas_las_tablas();
                 system("pause");
                 system("cls");
                 break;
-
 /*	FINALIZACION DE LA PARTE DE LOS 9 PROGRAMAS HECHOS POR 
 	ROBIN DANIEL RODRIGUEZ GERONIMO 7691-23-3006
 	Cada programa implementado en el switch fue hecho por
@@ -220,32 +220,82 @@ int main() {
 	un integrante que no cumplio y no podemos esperar a que 
 	sea media noche para entregarlo, se dio aviso correspondiente sobre 
  	estre proyecto para lo cual no hay excusa	*/
-
+ 	
+ 	
+ 	//parte realiaza por Rodrigo Zavala desde el 10 al 20
             case 10:
+                cout << "\tMultiplicación Manual" << endl;
+                int multiplicand, multiplier;
+                cout << "Ingrese el multiplicando: ";
+                cin >> multiplicand;
+                cout << "Ingrese el multiplicador: ";
+                cin >> multiplier;
+                imprimirMultiplicacion(multiplicand, multiplier); // Llamada a la función corregida
                 system("pause");
                 system("cls");
                 break;
-
+//parte realiaza por Rodrigo Zavala desde el 10 al 20
             case 11:
+                cout << "\tConversion Binario" << endl;
+                cout << "Introduce un número decimal: ";
+                cin >> num1;
+                decimalToBinary(num1); // Llamada a la función corregida
                 system("pause");
                 system("cls");
                 break;
-
+//parte realiaza por Rodrigo Zavala desde el 10 al 20
             case 12:
+                // Implementación para la opción 12 (Conversion Hexadecimal)
+                cout << "\tConversion Hexadecimal" << endl;
+                cout << "Introduce un número decimal: ";
+                cin >> num1;
+                cout << "El número hexadecimal es: " << decimalToHexadecimal(num1) << endl; // Llamada a la función corregida
                 system("pause");
                 system("cls");
                 break;
-
+//parte realiaza por Rodrigo Zavala desde el 10 al 20
             case 13:
-                system("pause");
-                system("cls");
-                break;
+                // Implementación para la opción 13 (Figuras Geometricas)
+                cout << "\tFiguras Geométricas" << endl;
+                cout << "Seleccione la figura geométrica: \n";
+                cout << "1. Triángulo\n";
+                cout << "2. Cuadrado\n";
+                cout << "3. Rectángulo\n";
+                cin >> opc;
 
-            case 14:
+                switch (opc) {
+                    case 1:
+                        int triangleHeight;
+                        cout << "Ingrese la altura del triángulo: ";
+                        cin >> triangleHeight;
+                        drawTriangle(triangleHeight);
+                        break;
+                    case 2:
+                        int squareSide;
+                        cout << "Ingrese el tamaño del lado del cuadrado: ";
+                        cin >> squareSide;
+                        drawSquare(squareSide);
+                        break;
+                    case 3:
+                        int rectangleWidth, rectangleHeight;
+                        cout << "Ingrese el ancho del rectángulo: ";
+                        cin >> rectangleWidth;
+                        cout << "Ingrese la altura del rectángulo: ";
+                        cin >> rectangleHeight;
+                        drawRectangle(rectangleWidth, rectangleHeight);
+                        break;
+                    default:
+                        cout << "Opción inválida.\n";
+                        break;
+                }
                 system("pause");
                 system("cls");
                 break;
-//parte realiaza por Rodrigo Zavala desde el 15 al 20
+//parte realiaza por Rodrigo Zavala desde el 10 al 20
+            case 14:
+                main_punto();
+                break;
+//parte realiaza por Rodrigo Zavala desde el 10 al 20
             case 15:
                 {
                     system("pause");
@@ -299,12 +349,12 @@ int main() {
                         cin.get();
 
                     } while (opcion != '4');
-					
-					system("pause");
-					system("cls");
+
+                    system("pause");
+                    system("cls");
                     break;
                 }
-//parte realiaza por Rodrigo Zavala desde el 15 al 20
+//parte realiaza por Rodrigo Zavala desde el 10 al 20
             case 16:
                 {
                     system("pause");
@@ -324,12 +374,12 @@ int main() {
                     double hipotenusa = triangulo.calcularHipotenusa();
 
                     cout << "La longitud de la hipotenusa es: " << hipotenusa << endl;
-					
-					system("pause");
-					system("cls");
+
+                    system("pause");
+                    system("cls");
                     break;
                 }
-//parte realiaza por Rodrigo Zavala desde el 15 al 20
+//parte realiaza por Rodrigo Zavala desde el 10 al 20
             case 17:
                 {
                     system("pause");
@@ -348,11 +398,11 @@ int main() {
                     cout << "Resta: " << calc.restar(num1, num2) << endl;
                     cout << "Multiplicación: " << calc.multiplicar(num1, num2) << endl;
                     cout << "División: " << calc.dividir(num1, num2) << endl;
-					system("pause");
-					system("cls");
+                    system("pause");
+                    system("cls");
                     break;
                 }
-//parte realiaza por Rodrigo Zavala desde el 15 al 20
+//parte realiaza por Rodrigo Zavala desde el 10 al 20
             case 18:
                 {
                     system("pause");
@@ -369,12 +419,12 @@ int main() {
 
                     cout << "El área del rectángulo es: " << rect.calcularArea() << endl;
                     cout << "El perímetro del rectángulo es: " << rect.calcularPerimetro() << endl;
-					
-					system("pause");
-					system("cls");
+
+                    system("pause");
+                    system("cls");
                     break;
                 }
-//parte realiaza por Rodrigo Zavala desde el 15 al 20
+//parte realiaza por Rodrigo Zavala desde el 10 al 20
             case 19:
                 {
                     system("pause");
@@ -415,11 +465,11 @@ int main() {
                         it->mostrarInformacion();
                         cout << endl;
                     }
-					system("pause");
-					system("cls");
+                    system("pause");
+                    system("cls");
                     break;
                 }
-//parte realiaza por Rodrigo Zavala desde el 15 al 20
+//parte realiaza por Rodrigo Zavala desde el 10 al 20
             case 20:
                 {
                     system("pause");
@@ -434,8 +484,8 @@ int main() {
                     cout << "Temperatura en grados Celsius: " << tempCelsius << endl;
                     cout << "Temperatura en grados Fahrenheit: " << conversor.celsiusToFahrenheit(tempCelsius) << endl;
                     cout << "Temperatura en grados Kelvin: " << conversor.celsiusToKelvin(tempCelsius) << endl;
-					system("pause");
-					system("cls");
+                    system("pause");
+                    system("cls");
                     break;
                 }
 
